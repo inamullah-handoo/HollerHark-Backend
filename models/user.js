@@ -34,6 +34,9 @@ const UserSchema = mongoose.Schema({
     role:{
         type: String,
         required: true
+    },
+    categories:{
+        type: Array
     }
 });
 
@@ -68,6 +71,18 @@ module.exports.getUserByRollno = function(rollno,callback){
 // get by role
 module.exports.getUserByRole = function(role,callback){
     const query = {role: role};
+    User.find(query, callback);
+}
+
+// get workers
+module.exports.getWorkers = function(callback){
+    const query = {$or: [{role: 'Teaching'}, {role: 'Non-Teaching'}]};
+    User.find(query, callback);
+}
+
+// get by category
+module.exports.getUserByCategory = function(category,callback){
+    const query = {categories: category};
     User.find(query, callback);
 }
 

@@ -46,6 +46,10 @@ const ComplaintSchema = mongoose.Schema({
     },
     completedDate:{
         type: String
+    },
+    log:{
+        type: Array,
+        required: true
     }
 });
 
