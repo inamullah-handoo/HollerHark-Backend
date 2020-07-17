@@ -292,7 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<footer class=\"footer p-0\">\n    <div class=\"container border-top border-primary\">\n        <p class=\"pt-2 mb-0\">&copy; 2020 | BGSBU</p>\n    </div>\n</footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("<footer class=\"footer p-0\">\n  <div class=\"container border-top border-primary\">\n    <p class=\"pt-2 mb-0\">&copy; 2020 | BGSBU</p>\n  </div>\n</footer>\n");
 
 /***/ }),
 
@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form #loginForm=\"ngForm\" class=\"w-50 ml-auto pb-5\" (ngSubmit)=\"login()\">\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"email\" class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': em.valid || em.untouched, 'bg-danger': em.invalid && em.touched}\">Email</span>\n        </div>\n        <input #em=\"ngModel\" [ngClass]=\"{'is-invalid': em.invalid && em.touched}\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" type=\"email\" [(ngModel)]=\"email\" class=\"form-control\" name=\"email\">\n        <div class=\"invalid-feedback\">Email is required</div>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"password\" class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': pass.valid || pass.untouched, 'bg-danger': pass.invalid && pass.touched}\">Password</span>\n        </div>\n        <input #pass=\"ngModel\" [ngClass]=\"{'is-invalid': pass.invalid && pass.touched}\" required pattern=\"(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$\" type=\"password\" [(ngModel)]=\"password\" class=\"form-control\" name=\"password\">\n        <div class=\"invalid-feedback\">Password must contain:\n            <ul>\n                <li>1 Uppercase</li>\n                <li>1 Lowercase</li>\n                <li>1 Number/Special Character</li>\n                <li>Minimum 8 Characters</li>\n            </ul>\n        </div>\n    </div>\n    <button [disabled]=\"loginForm.invalid\" type=\"submit\" class=\"btn btn-primary pull-right\" value=\"Submit\">Submit</button>\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form #loginForm=\"ngForm\" class=\"w-50 ml-auto pb-5\" (ngSubmit)=\"login()\">\n  <div class=\"input-group mb-3\">\n    <div class=\"input-group-prepend\">\n      <span\n        for=\"email\"\n        class=\"input-group-text text-white mr-1 rounded-left\"\n        [ngClass]=\"{\n          'bg-primary': em.valid || em.untouched,\n          'bg-danger': em.invalid && em.touched\n        }\"\n        >Email</span\n      >\n    </div>\n    <input\n      #em=\"ngModel\"\n      [ngClass]=\"{ 'is-invalid': em.invalid && em.touched }\"\n      required\n      pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"\n      type=\"email\"\n      [(ngModel)]=\"email\"\n      class=\"form-control\"\n      name=\"email\"\n    />\n    <div class=\"invalid-feedback\">Email is required</div>\n  </div>\n  <div class=\"input-group mb-3\">\n    <div class=\"input-group-prepend\">\n      <span\n        for=\"password\"\n        class=\"input-group-text text-white mr-1 rounded-left\"\n        [ngClass]=\"{\n          'bg-primary': pass.valid || pass.untouched,\n          'bg-danger': pass.invalid && pass.touched\n        }\"\n        >Password</span\n      >\n    </div>\n    <input\n      #pass=\"ngModel\"\n      [ngClass]=\"{ 'is-invalid': pass.invalid && pass.touched }\"\n      required\n      pattern=\"(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$\"\n      type=\"password\"\n      [(ngModel)]=\"password\"\n      class=\"form-control\"\n      name=\"password\"\n    />\n    <div class=\"invalid-feedback\">\n      Password must contain:\n      <ul>\n        <li>1 Uppercase</li>\n        <li>1 Lowercase</li>\n        <li>1 Number/Special Character</li>\n        <li>Minimum 8 Characters</li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"text-right\">\n    <a [routerLink]=\"['/user/forgotpassword']\">Forgot Password</a>\n  </div>\n  <div>\n    <button\n      [disabled]=\"loginForm.invalid\"\n      type=\"submit\"\n      class=\"btn btn-primary pull-right\"\n      value=\"Submit\"\n    >\n      Submit\n    </button>\n  </div>\n</form>\n");
 
 /***/ }),
 
@@ -436,6 +436,58 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<form #userRegisterForm=\"ngForm\" class=\"w-50 ml-auto pb-5\" (ngSubmit)=\"register()\">\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"role\" class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': cr.valid || cr.untouched, 'bg-danger': cr.invalid && cr.touched}\">Profession</span>\n        </div>\n        <select #cr=\"ngModel\" [ngClass]=\"{'is-invalid': cr.invalid && cr.touched}\" required class=\"form-control\" name=\"role\" [(ngModel)]=\"role\" (change)=\"changeRole()\" required>\n            <option name=\"Student\">Student</option>\n            <option name=\"Teaching\">Teaching</option>\n            <option name=\"Non-Teaching\">Non-Teaching</option>\n        </select>\n        <small class=\"invalid-feedback\">Enter your Profession</small>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"name\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': nam.valid || nam.untouched, 'bg-danger': nam.invalid && nam.touched}\">Full Name</span>\n        </div>\n        <input #nam=\"ngModel\" [ngClass]=\"{'is-invalid': nam.invalid && nam.touched}\" required type=\"text\" [(ngModel)]=\"name\" class=\"form-control\" name=\"name\">\n        <small class=\"invalid-feedback\">Enter your Full Name</small>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"email\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': em.valid || em.untouched, 'bg-danger': em.invalid && em.touched}\">Email</span>\n        </div>\n        <input #em=\"ngModel\" [ngClass]=\"{'is-invalid': em.invalid && em.touched}\" required pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" type=\"email\" [(ngModel)]=\"email\" class=\"form-control\" value=\"email@example.com\" name=\"email\">\n        <small class=\"invalid-feedback\">Enter valid Email</small>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"phoneno\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': ph.valid || ph.untouched, 'bg-danger': ph.invalid && ph.touched}\">Phone No.</span>\n        </div>\n        <input #ph=\"ngModel\" [ngClass]=\"{'is-invalid': ph.invalid && ph.touched}\" required pattern=\"[0-9]{10}\" type=\"tel\" [(ngModel)]=\"phoneno\" class=\"form-control\" name=\"phoneno\">\n        <small class=\"invalid-feedback\">Enter valid Phone Number</small>\n    </div>\n    <div *ngIf=\"show\" class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"rollno\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': rn.valid || rn.untouched, 'bg-danger': rn.invalid && rn.touched}\">Roll No.</span>\n        </div>\n        <input #rn=\"ngModel\" [ngClass]=\"{'is-invalid': rn.invalid && rn.touched}\" required type=\"text\" [(ngModel)]=\"rollno\" class=\"form-control\" name=\"rollno\">\n        <small class=\"invalid-feedback\">Enter your Roll Number</small>\n    </div>\n    <div *ngIf=\"showSchool\" class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"school\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': schl.valid || schl.untouched, 'bg-danger': schl.invalid && schl.touched}\">School</span>\n        </div>\n        <input #schl=\"ngModel\" [ngClass]=\"{'is-invalid': schl.invalid && schl.touched}\" required type=\"text\" [(ngModel)]=\"school\" class=\"form-control\" name=\"school\">\n        <small class=\"invalid-feedback\">Enter your School</small>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"dept\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': dep.valid || dep.untouched, 'bg-danger': dep.invalid && dep.touched}\">Department</span>\n        </div>\n        <input #dep=\"ngModel\" [ngClass]=\"{'is-invalid': dep.invalid && dep.touched}\" required type=\"text\" [(ngModel)]=\"dept\" class=\"form-control\" name=\"dept\">\n        <small class=\"invalid-feedback\">Enter your Department</small>\n    </div>\n    <div *ngIf=\"show\" class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"batch\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': bach.valid || bach.untouched, 'bg-danger': bach.invalid && bach.touched}\">Batch</span>\n        </div>\n        <input #bach=\"ngModel\" [ngClass]=\"{'is-invalid': bach.invalid && bach.touched}\" required type=\"number\" [(ngModel)]=\"batch\" class=\"form-control\" name=\"batch\">\n        <small class=\"invalid-feedback\">Enter your Batch</small>\n    </div>\n    <div class=\"input-group mb-3\">\n        <div class=\"input-group-prepend\">\n            <span for=\"password\"  class=\"input-group-text text-white mr-1 rounded-left\" [ngClass]=\"{'bg-primary': pass.valid || pass.untouched, 'bg-danger': pass.invalid && pass.touched}\">Password</span>\n        </div>\n        <input #pass=\"ngModel\" [ngClass]=\"{'is-invalid': pass.invalid && pass.touched}\" required pattern=\"(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$\" type=\"password\" [(ngModel)]=\"password\" class=\"form-control\" name=\"password\">\n        <small class=\"invalid-feedback\">Password must contain:\n            <ul>\n                <li>1 Uppercase</li>\n                <li>1 Lowercase</li>\n                <li>1 Number/Special Character</li>\n                <li>Minimum 8 Characters</li>\n            </ul>\n        </small>\n    </div>\n    <button [disabled]=\"userRegisterForm.invalid\" type=\"submit\" class=\"btn btn-primary pull-right\" value=\"Submit\">Submit</button>\n</form>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-email/activate-email.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-email/activate-email.component.html ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p class=\"text-center\">{{ msg }}</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-phone/activate-phone.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-phone/activate-phone.component.html ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p class=\"text-center\">{{ msg }}</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/forgot-password/forgot-password.component.html":
+/*!***************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/forgot-password/forgot-password.component.html ***!
+  \***************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form\n  #forgotPasswordForm=\"ngForm\"\n  class=\"w-50 ml-auto pb-5\"\n  (ngSubmit)=\"forgotPassword()\"\n>\n  <div class=\"input-group mb-3\">\n    <div class=\"input-group-prepend\">\n      <span\n        for=\"email\"\n        class=\"input-group-text text-white mr-1 rounded-left\"\n        [ngClass]=\"{\n          'bg-primary': em.valid || em.untouched,\n          'bg-danger': em.invalid && em.touched\n        }\"\n        >Email</span\n      >\n    </div>\n    <input\n      #em=\"ngModel\"\n      [ngClass]=\"{ 'is-invalid': em.invalid && em.touched }\"\n      required\n      pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"\n      type=\"email\"\n      [(ngModel)]=\"email\"\n      class=\"form-control\"\n      name=\"email\"\n    />\n    <div class=\"invalid-feedback\">Email is required</div>\n  </div>\n  <div>\n    <button\n      [disabled]=\"forgotPasswordForm.invalid\"\n      type=\"submit\"\n      class=\"btn btn-primary pull-right\"\n      value=\"Submit\"\n    >\n      Submit\n    </button>\n  </div>\n</form>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/reset-password/reset-password.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/reset-password/reset-password.component.html ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form\n  #resetPasswordForm=\"ngForm\"\n  class=\"w-50 ml-auto pb-5\"\n  (ngSubmit)=\"resetPassword()\"\n  *ngIf=\"show\"\n>\n  <div class=\"input-group mb-3\">\n    <div class=\"input-group-prepend\">\n      <span\n        for=\"newPassword\"\n        class=\"input-group-text text-white mr-1 rounded-left\"\n        [ngClass]=\"{\n          'bg-primary': pass.valid || pass.untouched,\n          'bg-danger': pass.invalid && pass.touched\n        }\"\n        >New Password</span\n      >\n    </div>\n    <input\n      #pass=\"ngModel\"\n      [ngClass]=\"{ 'is-invalid': pass.invalid && pass.touched }\"\n      required\n      pattern=\"(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$\"\n      type=\"password\"\n      [(ngModel)]=\"newPassword\"\n      class=\"form-control\"\n      name=\"newPassword\"\n    />\n    <div class=\"invalid-feedback\">\n      Password must contain:\n      <ul>\n        <li>1 Uppercase</li>\n        <li>1 Lowercase</li>\n        <li>1 Number/Special Character</li>\n        <li>Minimum 8 Characters</li>\n      </ul>\n    </div>\n  </div>\n  <div>\n    <button\n      [disabled]=\"resetPasswordForm.invalid\"\n      type=\"submit\"\n      class=\"btn btn-primary pull-right\"\n      value=\"Submit\"\n    >\n      Submit\n    </button>\n  </div>\n</form>\n\n<div *ngIf=\"!show\">\n  <p>Token has expired</p>\n</div>\n");
 
 /***/ }),
 
@@ -718,7 +770,7 @@ let AppComponent = class AppComponent {
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-root',
+        selector: "app-root",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")).default]
     })
@@ -776,12 +828,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_admin_view_user_list_view_user_list_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/admin/view-user-list/view-user-list.component */ "./src/app/components/admin/view-user-list/view-user-list.component.ts");
 /* harmony import */ var _components_admin_view_user_details_view_user_details_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/admin/view-user-details/view-user-details.component */ "./src/app/components/admin/view-user-details/view-user-details.component.ts");
 /* harmony import */ var _components_admin_dean_register_dean_register_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/admin/dean-register/dean-register.component */ "./src/app/components/admin/dean-register/dean-register.component.ts");
-/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./services/validation.service */ "./src/app/services/validation.service.ts");
-/* harmony import */ var _services_complaint_auth_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./services/complaint-auth.service */ "./src/app/services/complaint-auth.service.ts");
-/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./services/user-auth.service */ "./src/app/services/user-auth.service.ts");
-/* harmony import */ var _guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
-/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
-/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var _components_utilities_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/utilities/forgot-password/forgot-password.component */ "./src/app/components/utilities/forgot-password/forgot-password.component.ts");
+/* harmony import */ var _components_utilities_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/utilities/reset-password/reset-password.component */ "./src/app/components/utilities/reset-password/reset-password.component.ts");
+/* harmony import */ var _components_utilities_activate_email_activate_email_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/utilities/activate-email/activate-email.component */ "./src/app/components/utilities/activate-email/activate-email.component.ts");
+/* harmony import */ var _components_utilities_activate_phone_activate_phone_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/utilities/activate-phone/activate-phone.component */ "./src/app/components/utilities/activate-phone/activate-phone.component.ts");
+/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./services/validation.service */ "./src/app/services/validation.service.ts");
+/* harmony import */ var _services_complaint_auth_service__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./services/complaint-auth.service */ "./src/app/services/complaint-auth.service.ts");
+/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./services/user-auth.service */ "./src/app/services/user-auth.service.ts");
+/* harmony import */ var _guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_46__);
+
+
+
+
 
 
 
@@ -826,19 +886,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const appRoutes = [
-    { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"] },
-    { path: 'user/register', component: _components_users_user_register_user_register_component__WEBPACK_IMPORTED_MODULE_11__["UserRegisterComponent"] },
-    { path: 'user/login', component: _components_users_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"] },
-    { path: 'user/profile', component: _components_users_profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'user/dashboard', component: _components_users_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__["DashboardComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'admin/dashboard', component: _components_admin_admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_29__["AdminDashboardComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'admin/userList/:role', component: _components_admin_view_user_list_view_user_list_component__WEBPACK_IMPORTED_MODULE_35__["ViewUserListComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'admin/user/:id', component: _components_admin_view_user_details_view_user_details_component__WEBPACK_IMPORTED_MODULE_36__["ViewUserDetailsComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'admin/dean/register', component: _components_admin_dean_register_dean_register_component__WEBPACK_IMPORTED_MODULE_37__["DeanRegisterComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'complaint/register', component: _components_complaints_complaint_register_complaint_register_component__WEBPACK_IMPORTED_MODULE_16__["ComplaintRegisterComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'complaint/list/:params', component: _components_complaints_view_complaint_list_view_complaint_list_component__WEBPACK_IMPORTED_MODULE_20__["ViewComplaintListComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: 'complaint/view/:id', component: _components_complaints_view_complaint_view_complaint_component__WEBPACK_IMPORTED_MODULE_21__["ViewComplaintComponent"], canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]] },
-    { path: '**', redirectTo: '/' }
+    { path: "", component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"] },
+    { path: "resetpassword/:token", component: _components_utilities_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_39__["ResetPasswordComponent"] },
+    { path: "user/register", component: _components_users_user_register_user_register_component__WEBPACK_IMPORTED_MODULE_11__["UserRegisterComponent"] },
+    { path: "user/login", component: _components_users_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"] },
+    { path: "user/forgotpassword", component: _components_utilities_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"] },
+    { path: "user/activate/email/:token", component: _components_utilities_activate_email_activate_email_component__WEBPACK_IMPORTED_MODULE_40__["ActivateEmailComponent"] },
+    { path: "user/activate/phone/:token", component: _components_utilities_activate_phone_activate_phone_component__WEBPACK_IMPORTED_MODULE_41__["ActivatePhoneComponent"] },
+    {
+        path: "user/profile",
+        component: _components_users_profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "user/dashboard",
+        component: _components_users_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__["DashboardComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "admin/dashboard",
+        component: _components_admin_admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_29__["AdminDashboardComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "admin/userList/:role",
+        component: _components_admin_view_user_list_view_user_list_component__WEBPACK_IMPORTED_MODULE_35__["ViewUserListComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "admin/user/:id",
+        component: _components_admin_view_user_details_view_user_details_component__WEBPACK_IMPORTED_MODULE_36__["ViewUserDetailsComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "admin/dean/register",
+        component: _components_admin_dean_register_dean_register_component__WEBPACK_IMPORTED_MODULE_37__["DeanRegisterComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "complaint/register",
+        component: _components_complaints_complaint_register_complaint_register_component__WEBPACK_IMPORTED_MODULE_16__["ComplaintRegisterComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "complaint/list/:params",
+        component: _components_complaints_view_complaint_list_view_complaint_list_component__WEBPACK_IMPORTED_MODULE_20__["ViewComplaintListComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    {
+        path: "complaint/view/:id",
+        component: _components_complaints_view_complaint_view_complaint_component__WEBPACK_IMPORTED_MODULE_21__["ViewComplaintComponent"],
+        canActivate: [_guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"]],
+    },
+    { path: "**", redirectTo: "/" },
 ];
 let AppModule = class AppModule {
 };
@@ -876,22 +976,26 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _components_admin_admin_dashboard_category_view_categories_view_categories_component__WEBPACK_IMPORTED_MODULE_34__["ViewCategoriesComponent"],
             _components_admin_view_user_list_view_user_list_component__WEBPACK_IMPORTED_MODULE_35__["ViewUserListComponent"],
             _components_admin_view_user_details_view_user_details_component__WEBPACK_IMPORTED_MODULE_36__["ViewUserDetailsComponent"],
-            _components_admin_dean_register_dean_register_component__WEBPACK_IMPORTED_MODULE_37__["DeanRegisterComponent"]
+            _components_admin_dean_register_dean_register_component__WEBPACK_IMPORTED_MODULE_37__["DeanRegisterComponent"],
+            _components_utilities_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"],
+            _components_utilities_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_39__["ResetPasswordComponent"],
+            _components_utilities_activate_email_activate_email_component__WEBPACK_IMPORTED_MODULE_40__["ActivateEmailComponent"],
+            _components_utilities_activate_phone_activate_phone_component__WEBPACK_IMPORTED_MODULE_41__["ActivatePhoneComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(appRoutes),
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            ng_flash_messages__WEBPACK_IMPORTED_MODULE_42__["NgFlashMessagesModule"].forRoot()
+            ng_flash_messages__WEBPACK_IMPORTED_MODULE_46__["NgFlashMessagesModule"].forRoot(),
         ],
         providers: [
-            _services_validation_service__WEBPACK_IMPORTED_MODULE_38__["ValidationService"],
-            _services_complaint_auth_service__WEBPACK_IMPORTED_MODULE_39__["ComplaintAuthService"],
-            _services_user_auth_service__WEBPACK_IMPORTED_MODULE_40__["UserAuthService"],
-            _guard_auth_guard__WEBPACK_IMPORTED_MODULE_41__["AuthGuard"]
+            _services_validation_service__WEBPACK_IMPORTED_MODULE_42__["ValidationService"],
+            _services_complaint_auth_service__WEBPACK_IMPORTED_MODULE_43__["ComplaintAuthService"],
+            _services_user_auth_service__WEBPACK_IMPORTED_MODULE_44__["UserAuthService"],
+            _guard_auth_guard__WEBPACK_IMPORTED_MODULE_45__["AuthGuard"],
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
     })
 ], AppModule);
 
@@ -3908,16 +4012,15 @@ let UserRegisterComponent = class UserRegisterComponent {
         this.ngFlashMessageService = ngFlashMessageService;
         this.showSchool = true;
     }
-    ngOnInit() {
-    }
+    ngOnInit() { }
     changeRole() {
-        if (this.role == 'Student') {
+        if (this.role == "Student") {
             this.show = true;
         }
         else {
             this.show = false;
         }
-        if (this.role == 'Non-Teaching') {
+        if (this.role == "Non-Teaching") {
             this.showSchool = false;
         }
     }
@@ -3931,45 +4034,46 @@ let UserRegisterComponent = class UserRegisterComponent {
             dept: this.dept,
             batch: this.batch,
             password: this.password,
-            role: this.role
+            role: this.role,
         };
         if (!this.validationService.validateRegister(user)) {
             this.ngFlashMessageService.showFlashMessage({
-                messages: ['Please fill in all the fields'],
+                messages: ["Please fill in all the fields"],
                 dismissible: false,
                 timeout: 3000,
-                type: 'danger'
+                type: "danger",
             });
-            this.router.navigate(['/user/register']);
+            this.router.navigate(["/user/register"]);
         }
         else if (!this.validationService.validateEmail(user.email)) {
             this.ngFlashMessageService.showFlashMessage({
-                messages: ['Enter a valid Email'],
+                messages: ["Enter a valid Email"],
                 dismissible: false,
                 timeout: 3000,
-                type: 'danger'
+                type: "danger",
             });
-            this.router.navigate(['/user/register']);
+            this.router.navigate(["/user/register"]);
         }
         else {
             this.userAuthService.registerUser(user).subscribe((data) => {
+                // console.log(data);
                 if (data.success) {
                     this.ngFlashMessageService.showFlashMessage({
                         messages: [data.msg],
                         dismissible: false,
                         timeout: 3000,
-                        type: 'success'
+                        type: "success",
                     });
-                    this.router.navigate(['/user/login']);
+                    this.router.navigate(["/user/login"]);
                 }
                 else {
                     this.ngFlashMessageService.showFlashMessage({
                         messages: [data.msg],
                         dismissible: false,
                         timeout: 3000,
-                        type: 'danger'
+                        type: "danger",
                     });
-                    this.router.navigate(['/user/register']);
+                    this.router.navigate(["/user/register"]);
                 }
             });
         }
@@ -3983,11 +4087,344 @@ UserRegisterComponent.ctorParameters = () => [
 ];
 UserRegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-user-register',
+        selector: "app-user-register",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./user-register.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/users/user-register/user-register.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./user-register.component.css */ "./src/app/components/users/user-register/user-register.component.css")).default]
     })
 ], UserRegisterComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/activate-email/activate-email.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/components/utilities/activate-email/activate-email.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXRpbGl0aWVzL2FjdGl2YXRlLWVtYWlsL2FjdGl2YXRlLWVtYWlsLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/activate-email/activate-email.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/utilities/activate-email/activate-email.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: ActivateEmailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivateEmailComponent", function() { return ActivateEmailComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user-auth.service */ "./src/app/services/user-auth.service.ts");
+
+
+
+
+let ActivateEmailComponent = class ActivateEmailComponent {
+    constructor(userAuthService, route) {
+        this.userAuthService = userAuthService;
+        this.route = route;
+    }
+    ngOnInit() {
+        this.token = this.route.snapshot.paramMap.get("token");
+        this.userAuthService.activateEmail(this.token).subscribe((data) => {
+            if (data.success) {
+                this.msg = data.msg;
+            }
+            else {
+                this.msg = data.msg;
+            }
+        });
+    }
+};
+ActivateEmailComponent.ctorParameters = () => [
+    { type: _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__["UserAuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+];
+ActivateEmailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-activate-email",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./activate-email.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-email/activate-email.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./activate-email.component.css */ "./src/app/components/utilities/activate-email/activate-email.component.css")).default]
+    })
+], ActivateEmailComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/activate-phone/activate-phone.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/components/utilities/activate-phone/activate-phone.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXRpbGl0aWVzL2FjdGl2YXRlLXBob25lL2FjdGl2YXRlLXBob25lLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/activate-phone/activate-phone.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/utilities/activate-phone/activate-phone.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: ActivatePhoneComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivatePhoneComponent", function() { return ActivatePhoneComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user-auth.service */ "./src/app/services/user-auth.service.ts");
+
+
+
+
+let ActivatePhoneComponent = class ActivatePhoneComponent {
+    constructor(userAuthService, route) {
+        this.userAuthService = userAuthService;
+        this.route = route;
+    }
+    ngOnInit() {
+        this.token = this.route.snapshot.paramMap.get("token");
+        this.userAuthService.activatePhone(this.token).subscribe((data) => {
+            if (data.success) {
+                this.msg = data.msg;
+            }
+            else {
+                this.msg = data.msg;
+            }
+        });
+    }
+};
+ActivatePhoneComponent.ctorParameters = () => [
+    { type: _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__["UserAuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+];
+ActivatePhoneComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-activate-phone",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./activate-phone.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/activate-phone/activate-phone.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./activate-phone.component.css */ "./src/app/components/utilities/activate-phone/activate-phone.component.css")).default]
+    })
+], ActivatePhoneComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/forgot-password/forgot-password.component.css":
+/*!************************************************************************************!*\
+  !*** ./src/app/components/utilities/forgot-password/forgot-password.component.css ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXRpbGl0aWVzL2ZvcmdvdC1wYXNzd29yZC9mb3Jnb3QtcGFzc3dvcmQuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/forgot-password/forgot-password.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/components/utilities/forgot-password/forgot-password.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: ForgotPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function() { return ForgotPasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/validation.service */ "./src/app/services/validation.service.ts");
+/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user-auth.service */ "./src/app/services/user-auth.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+let ForgotPasswordComponent = class ForgotPasswordComponent {
+    constructor(validationService, userAuthService, ngFlashMessageService) {
+        this.validationService = validationService;
+        this.userAuthService = userAuthService;
+        this.ngFlashMessageService = ngFlashMessageService;
+    }
+    ngOnInit() { }
+    forgotPassword() {
+        if (this.validationService.validateEmail(this.email)) {
+            let info = {
+                email: this.email,
+            };
+            this.userAuthService.forgotPassword(info).subscribe((data) => {
+                if (data.success) {
+                    this.ngFlashMessageService.showFlashMessage({
+                        messages: [data.msg],
+                        dismissible: false,
+                        timeout: 3000,
+                        type: "success",
+                    });
+                }
+                else {
+                    this.ngFlashMessageService.showFlashMessage({
+                        messages: [data.msg],
+                        dismissible: false,
+                        timeout: 3000,
+                        type: "danger",
+                    });
+                }
+            });
+        }
+        else {
+            this.ngFlashMessageService.showFlashMessage({
+                messages: ["Please enter a valid email"],
+                dismissible: false,
+                timeout: 3000,
+                type: "danger",
+            });
+        }
+    }
+};
+ForgotPasswordComponent.ctorParameters = () => [
+    { type: _services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"] },
+    { type: _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__["UserAuthService"] },
+    { type: ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__["NgFlashMessageService"] }
+];
+ForgotPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-forgot-password",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./forgot-password.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/forgot-password/forgot-password.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./forgot-password.component.css */ "./src/app/components/utilities/forgot-password/forgot-password.component.css")).default]
+    })
+], ForgotPasswordComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/reset-password/reset-password.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/components/utilities/reset-password/reset-password.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXRpbGl0aWVzL3Jlc2V0LXBhc3N3b3JkL3Jlc2V0LXBhc3N3b3JkLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/components/utilities/reset-password/reset-password.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/utilities/reset-password/reset-password.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: ResetPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResetPasswordComponent", function() { return ResetPasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_validation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/validation.service */ "./src/app/services/validation.service.ts");
+/* harmony import */ var _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user-auth.service */ "./src/app/services/user-auth.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+
+let ResetPasswordComponent = class ResetPasswordComponent {
+    constructor(validationService, userAuthService, ngFlashMessageService, route, router) {
+        this.validationService = validationService;
+        this.userAuthService = userAuthService;
+        this.ngFlashMessageService = ngFlashMessageService;
+        this.route = route;
+        this.router = router;
+        this.token = this.route.snapshot.paramMap.get("token");
+        this.show = false;
+    }
+    ngOnInit() {
+        this.userAuthService.checkToken(this.token).subscribe((data) => {
+            if (data.success) {
+                this.show = true;
+            }
+            else {
+                this.show = false;
+            }
+        });
+    }
+    resetPassword() {
+        if (this.validationService.validatePassword(this.newPassword)) {
+            let info = {
+                newPassword: this.newPassword,
+            };
+            this.userAuthService
+                .resetPassword(info, this.token)
+                .subscribe((data) => {
+                console.log(data);
+                if (data.success) {
+                    this.ngFlashMessageService.showFlashMessage({
+                        messages: [data.msg],
+                        dismissible: false,
+                        timeout: 3000,
+                        type: "success",
+                    });
+                    this.router.navigate(["/user/login"]);
+                }
+                else {
+                    this.ngFlashMessageService.showFlashMessage({
+                        messages: [data.msg],
+                        dismissible: false,
+                        timeout: 3000,
+                        type: "danger",
+                    });
+                }
+            });
+        }
+        else {
+            this.ngFlashMessageService.showFlashMessage({
+                messages: ["Enter the new Password"],
+                dismissible: false,
+                timeout: 3000,
+                type: "danger",
+            });
+        }
+    }
+};
+ResetPasswordComponent.ctorParameters = () => [
+    { type: _services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"] },
+    { type: _services_user_auth_service__WEBPACK_IMPORTED_MODULE_3__["UserAuthService"] },
+    { type: ng_flash_messages__WEBPACK_IMPORTED_MODULE_4__["NgFlashMessageService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+];
+ResetPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-reset-password",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./reset-password.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/utilities/reset-password/reset-password.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./reset-password.component.css */ "./src/app/components/utilities/reset-password/reset-password.component.css")).default]
+    })
+], ResetPasswordComponent);
 
 
 
@@ -4208,7 +4645,7 @@ __webpack_require__.r(__webpack_exports__);
 let UserAuthService = class UserAuthService {
     constructor(http) {
         this.http = http;
-        this.localhost = 'http://localhost:3000/';
+        this.localhost = "http://localhost:3000/";
         this.helper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_3__["JwtHelperService"]();
     }
     loggedIn() {
@@ -4216,7 +4653,7 @@ let UserAuthService = class UserAuthService {
         return !this.helper.isTokenExpired(this.authToken);
     }
     ifAdmin() {
-        const user = JSON.parse(localStorage.getItem('user'));
+        const user = JSON.parse(localStorage.getItem("user"));
         if (user) {
             if (user.role == "Admin") {
                 return false;
@@ -4236,219 +4673,259 @@ let UserAuthService = class UserAuthService {
     registerUser(user) {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json'
-            })
+                "Content-Type": "application/json",
+            }),
         };
         if (user.role == "Student") {
-            return this.http.post(this.localhost + 'users/student/register', user, httpOptions);
+            return this.http.post(this.localhost + "users/student/register", user, httpOptions);
         }
         else {
-            return this.http.post(this.localhost + 'users/faculty/register', user, httpOptions);
+            return this.http.post(this.localhost + "users/faculty/register", user, httpOptions);
         }
+    }
+    activateEmail(token) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            }),
+        };
+        return this.http.get(this.localhost + "users/activate/email/" + token, httpOptions);
+    }
+    activatePhone(token) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            }),
+        };
+        return this.http.get(this.localhost + "users/activate/phone/" + token, httpOptions);
+    }
+    forgotPassword(email) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            }),
+        };
+        return this.http.post(this.localhost + "users/forgotpassword", email, httpOptions);
+    }
+    checkToken(token) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            }),
+        };
+        return this.http.get(this.localhost + "users/resetpassword/" + token, httpOptions);
+    }
+    resetPassword(newPassword, token) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            }),
+        };
+        return this.http.post(this.localhost + "users/resetpassword/" + token, newPassword, httpOptions);
     }
     authenticateUser(user) {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json'
-            })
+                "Content-Type": "application/json",
+            }),
         };
-        return this.http.post(this.localhost + 'users/authenticate', user, httpOptions);
+        return this.http.post(this.localhost + "users/authenticate", user, httpOptions);
     }
     storeUserData(user, token) {
-        localStorage.setItem('user', JSON.stringify(user));
-        localStorage.setItem('token', token);
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", token);
         this.user = user;
         this.authToken = token;
     }
     loadToken() {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem("token");
         this.authToken = token;
     }
     logOut() {
         this.authToken = null;
         this.user = null;
-        localStorage.removeItem('user');
-        localStorage.removeItem('token');
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
     }
     getUserID() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/id', httpOptions);
+        return this.http.get(this.localhost + "users/id", httpOptions);
     }
     getUserName(id) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/name/' + id, httpOptions);
+        return this.http.get(this.localhost + "users/name/" + id, httpOptions);
     }
     getUserRole() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/role', httpOptions);
+        return this.http.get(this.localhost + "users/role", httpOptions);
     }
     getProfile() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/profile', httpOptions);
+        return this.http.get(this.localhost + "users/profile", httpOptions);
     }
     updateProfile(user, id) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.post(this.localhost + 'users/profile/' + id, user, httpOptions);
+        return this.http.post(this.localhost + "users/profile/" + id, user, httpOptions);
     }
     updatePassword(passwords, id) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.post(this.localhost + 'users/changePassword/' + id, passwords, httpOptions);
+        return this.http.post(this.localhost + "users/changePassword/" + id, passwords, httpOptions);
     }
     getByDashboard() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/byDashboard', httpOptions);
+        return this.http.get(this.localhost + "users/byDashboard", httpOptions);
     }
     getUnderDashboard() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/underDashboard', httpOptions);
+        return this.http.get(this.localhost + "users/underDashboard", httpOptions);
     }
     getAllComplaints() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/admin/complaints', httpOptions);
+        return this.http.get(this.localhost + "users/admin/complaints", httpOptions);
     }
     getAllUsers() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/admin/users', httpOptions);
+        return this.http.get(this.localhost + "users/admin/users", httpOptions);
     }
     getCategories() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/admin/category/view', httpOptions);
+        return this.http.get(this.localhost + "users/admin/category/view", httpOptions);
     }
     addCategory(cat) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.post(this.localhost + 'users/admin/category/add', cat, httpOptions);
+        return this.http.post(this.localhost + "users/admin/category/add", cat, httpOptions);
     }
     adminViewUserList(role) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/adminViewList/' + role, httpOptions);
+        return this.http.get(this.localhost + "users/adminViewList/" + role, httpOptions);
     }
     getUserDetails(id) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/admin/user/' + id, httpOptions);
+        return this.http.get(this.localhost + "users/admin/user/" + id, httpOptions);
     }
     registerDean(user) {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.post(this.localhost + 'users/dean/register', user, httpOptions);
+        return this.http.post(this.localhost + "users/dean/register", user, httpOptions);
     }
     getCatDean() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/deanCat', httpOptions);
+        return this.http.get(this.localhost + "users/deanCat", httpOptions);
     }
     getDeanID() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/deanID', httpOptions);
+        return this.http.get(this.localhost + "users/deanID", httpOptions);
     }
     getWorkerNameID() {
         this.loadToken();
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                'Content-Type': 'application/json',
-                'Authorization': this.authToken
-            })
+                "Content-Type": "application/json",
+                Authorization: this.authToken,
+            }),
         };
-        return this.http.get(this.localhost + 'users/workerNameID', httpOptions);
+        return this.http.get(this.localhost + "users/workerNameID", httpOptions);
     }
 };
 UserAuthService.ctorParameters = () => [
@@ -4456,7 +4933,7 @@ UserAuthService.ctorParameters = () => [
 ];
 UserAuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root",
     })
 ], UserAuthService);
 
@@ -4481,15 +4958,24 @@ __webpack_require__.r(__webpack_exports__);
 let ValidationService = class ValidationService {
     constructor() { }
     validateRegister(user) {
-        if (user.role == 'Dean') {
-            if (!user.name || !user.email || !user.phoneno || !user.school || !user.password) {
+        if (user.role == "Dean") {
+            if (!user.name ||
+                !user.email ||
+                !user.phoneno ||
+                !user.school ||
+                !user.password) {
                 return false;
             }
             else {
                 return true;
             }
         }
-        else if (!user.name || !user.email || !user.phoneno || !user.dept || !user.password || !user.role) {
+        else if (!user.name ||
+            !user.email ||
+            !user.phoneno ||
+            !user.dept ||
+            !user.password ||
+            !user.role) {
             return false;
         }
         else {
@@ -4505,6 +4991,14 @@ let ValidationService = class ValidationService {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+    validatePassword(password) {
+        if (!password) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
     validateLogin(user) {
         if (!user.email || !user.password) {
             return false;
@@ -4514,7 +5008,7 @@ let ValidationService = class ValidationService {
         }
     }
     validateModifyUser(user) {
-        if (!user.name || !user.email || !user.phoneno || !user.school || !user.dept) {
+        if (!user.name || !user.email || !user.phoneno || !user.school) {
             return false;
         }
         else {
@@ -4561,7 +5055,7 @@ let ValidationService = class ValidationService {
 };
 ValidationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root",
     })
 ], ValidationService);
 

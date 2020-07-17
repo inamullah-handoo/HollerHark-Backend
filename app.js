@@ -7,9 +7,12 @@ const passportjwt = require('passport-jwt');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
-
 // connect to database
-mongoose.connect(config.database,  { useNewUrlParser: true });
+mongoose.connect(config.database, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useCreateIndex: true,
+});
 let db = mongoose.connection;
 // check connection
 db.once('open', () => console.log(`Connected to db: ${config.database}`));
@@ -28,8 +31,8 @@ app.use(cors());
 
 // static folder
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 // bodyparser middleware
@@ -48,4 +51,7 @@ app.use('/users', users);
 app.use('/complaint', complaints);
 
 // start server
-app.listen(3000, () => console.log('Server started at port 3000'));
+let port = 3000;
+app.listen(port, () => console.log(`Server started at port ${port}`));
+
+// Developed by: Inamullah (https://www.linkedin.com/in/inamullah-handoo/)
